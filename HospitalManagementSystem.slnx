@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HospitalClient/HospitalClient.csproj" />
+  <Project Path="HospitalServer/HospitalServer.csproj" />
+</Solution>
