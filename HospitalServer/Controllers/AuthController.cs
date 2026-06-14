@@ -18,7 +18,7 @@ namespace HospitalServer.Controllers
         }
 
         // Controls when a user registers.
-        [HttpGet("register")]
+        [HttpPost("register")]
         public async Task<ActionResult<AuthResponse>> Register(RegisterRequest request)
         {
             var result = await _userService.RegisterAsync(request);
@@ -32,7 +32,7 @@ namespace HospitalServer.Controllers
         }
 
         // Controls when a user logins in.
-        [HttpGet("login")]
+        [HttpPost("login")]
         public async Task<ActionResult<AuthResponse>> Login(LoginRequest request)
         {
             var result = await _userService.LoginAsync(request);

@@ -20,7 +20,7 @@ namespace HospitalClient
             InitializeComponent();
         }
 
-        private async Task loginButton_Click(object sender, EventArgs e)
+        private async void loginButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -41,11 +41,11 @@ namespace HospitalClient
 
                 var httpClient = new HttpClient();
 
-                var response = await httpClient.PostAsync("http://localhost:5220/api/auth/login", content);
+                var response = await httpClient.PostAsync("http://localhost:5265/api/auth/login", content);
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Login failed");
+                    MessageBox.Show($"Invalid credentials.");
                     return;
                 }
             }
