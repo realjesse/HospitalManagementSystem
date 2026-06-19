@@ -43,3 +43,24 @@ Example:
     "MongoDb": "mongodb://localhost:27017"
   }
 }
+
+## Setup SQL Server Database
+### Connecting to the Server in the application
+The SQL Server connection string is located in `HospitalServer/appsettings.json`
+
+Please change the string to whatever local database is compatible.
+
+Current connection string:
+`"SqlServer": "Server=(localdb)\\MSSQLLocalDB;Database=HospitalManagementDb;Trusted_Connection=True;TrustServerCertificate=True;"`
+
+### Creating database via migration
+1. Open Tools --> NuGet Package Manager --> Package Manager Console
+2. Set Default project to: HospitalServer
+3. Run: `Update-Database`
+
+### Updating database (optional, for devs)
+1. Create a model class in HospitalServer/Models/
+2. Update HospitalDbContext.cs using that model class
+- This is where EFCore Migrations understand schema structure
+3. Using the NuGet Package Manager Console run `Add-Migration <DescriptiveName>`
+4. Using the NuGet Package Manager Console run `Update-Database`
