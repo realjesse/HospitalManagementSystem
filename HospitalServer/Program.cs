@@ -1,4 +1,5 @@
 using HospitalServer.Data;
+using HospitalServer.Hubs;
 using HospitalServer.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,8 @@ builder.Services.AddDbContext<HospitalDbContext>(options =>
 builder.Services.AddScoped<PatientService>();
 
 var app = builder.Build();
+
+app.MapHub<HospitalHub>("/hospitalHub");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
