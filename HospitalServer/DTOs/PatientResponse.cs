@@ -1,5 +1,6 @@
 ﻿namespace HospitalServer.DTOs
 {
+    // Returned info from database
     public class PatientResponse
     {
         public int PatientId { get; set; }
