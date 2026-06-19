@@ -30,7 +30,7 @@ namespace HospitalServer.Data
 
                 entity.Property(p => p.CreatedAt)
                 .IsRequired();
-            })
+            });
         }
     }
 }

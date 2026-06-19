@@ -1,4 +1,6 @@
+using HospitalServer.Data;
 using HospitalServer.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,11 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddSignalR();
 builder.Services.AddSingleton<UserService>();
+
+builder.Services.AddDbContext<HospitalDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+
+builder.Services.AddScoped<PatientService>();
 
 var app = builder.Build();
 
