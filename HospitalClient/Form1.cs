@@ -43,6 +43,8 @@ namespace HospitalClient
 
                 var response = await httpClient.PostAsync("http://localhost:5265/api/auth/login", content);
 
+                Console.Write(response);
+
                 if (!response.IsSuccessStatusCode)
                 {
                     MessageBox.Show($"Invalid credentials.");
