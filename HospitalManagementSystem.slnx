@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="HospitalClient/HospitalClient.csproj" />
+  <Project Path="HospitalClient/HospitalClient.csproj" Id="70a568f8-2e52-495a-8986-b4c3fc2a36b0" />
   <Project Path="HospitalServer/HospitalServer.csproj" />
 </Solution>
