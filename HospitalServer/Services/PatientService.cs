@@ -92,6 +92,8 @@ namespace HospitalServer.Services
             _db.Patients.Remove(patient);
 
             await _db.SaveChangesAsync();
+
+            return true;
         }
 
         // Converts Patient Entity into PatientResponse DTO
