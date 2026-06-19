@@ -1,5 +1,6 @@
 ﻿using HospitalClient.Forms;
 using HospitalClient.Models;
+using HospitalClient.Session;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -49,6 +50,22 @@ namespace HospitalClient
                     MessageBox.Show($"Invalid credentials.");
                     return;
                 }
+
+                // Deserialize content of response to get necessary info for CurrentUser session
+                var responseJson = await response.Content.ReadAsStringAsync();
+
+                var authResponse = JsonConvert.DeserializeObject<AuthResponse>(responseJson);
+
+                // Update session CurrentUser with values and enter MenuForm
+                CurrentUser.UserId = authResponse.UserId ?? "";
+                CurrentUser.UserName = authResponse.Username ?? "";
+                CurrentUser.Role = authResponse.Role ?? "";
+
+                // Enter MenuForm
+                var menuForm = new MenuForm();
+                menuForm.Show();
+                this.Hide();
+
             }
             catch (Exception ex)
             {
