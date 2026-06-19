@@ -1,4 +1,5 @@
-﻿using HospitalClient.Models;
+﻿using HospitalClient.Forms;
+using HospitalClient.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -43,8 +44,6 @@ namespace HospitalClient
 
                 var response = await httpClient.PostAsync("http://localhost:5265/api/auth/login", content);
 
-                Console.Write(response);
-
                 if (!response.IsSuccessStatusCode)
                 {
                     MessageBox.Show($"Invalid credentials.");
@@ -55,6 +54,15 @@ namespace HospitalClient
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+        }
+
+        private void goToRegisterButton_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+
+            registerForm.Show();
+
+            this.Hide();
         }
     }
 }
