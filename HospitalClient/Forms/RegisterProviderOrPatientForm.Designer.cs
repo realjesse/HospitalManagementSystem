@@ -50,6 +50,7 @@
             this.patientButton.TabIndex = 1;
             this.patientButton.Text = "Patient";
             this.patientButton.UseVisualStyleBackColor = true;
+            this.patientButton.Click += new System.EventHandler(this.patientButton_Click);
             // 
             // providerButton
             // 
@@ -59,6 +60,7 @@
             this.providerButton.TabIndex = 2;
             this.providerButton.Text = "Provider";
             this.providerButton.UseVisualStyleBackColor = true;
+            this.providerButton.Click += new System.EventHandler(this.providerButton_Click);
             // 
             // RegisterProviderOrPatientForm
             // 

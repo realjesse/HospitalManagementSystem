@@ -34,10 +34,6 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.registerButton = new System.Windows.Forms.Button();
-            this.roleGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.roleGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // goToLoginButton
@@ -84,7 +80,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(126, 211);
+            this.registerButton.Location = new System.Drawing.Point(128, 151);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 23);
             this.registerButton.TabIndex = 5;
@@ -92,45 +88,11 @@
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
-            // roleGroupBox
-            // 
-            this.roleGroupBox.Controls.Add(this.radioButton2);
-            this.roleGroupBox.Controls.Add(this.radioButton1);
-            this.roleGroupBox.Location = new System.Drawing.Point(119, 137);
-            this.roleGroupBox.Name = "roleGroupBox";
-            this.roleGroupBox.Size = new System.Drawing.Size(100, 68);
-            this.roleGroupBox.TabIndex = 6;
-            this.roleGroupBox.TabStop = false;
-            this.roleGroupBox.Text = "Role";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Client";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 43);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(64, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Provider";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 282);
-            this.Controls.Add(this.roleGroupBox);
+            this.ClientSize = new System.Drawing.Size(325, 202);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.label2);
@@ -139,8 +101,6 @@
             this.Controls.Add(this.goToLoginButton);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
-            this.roleGroupBox.ResumeLayout(false);
-            this.roleGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,8 +114,5 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button registerButton;
-        private System.Windows.Forms.GroupBox roleGroupBox;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

@@ -35,17 +35,6 @@ namespace HospitalClient.Forms
         {
             try
             {
-                // Get role
-                System.Windows.Forms.RadioButton selectedRole = roleGroupBox.Controls
-                    .OfType<System.Windows.Forms.RadioButton>()
-                    .FirstOrDefault(rb => rb.Checked);
-
-                // Check if there are inputted values for each field
-                if (selectedRole == null)
-                {
-                    MessageBox.Show("Please select a role.");
-                    return;
-                }
 
                 if (string.IsNullOrWhiteSpace(usernameTextBox.Text))
                 {
@@ -63,7 +52,6 @@ namespace HospitalClient.Forms
                 {
                     Username = usernameTextBox.Text,
                     Password = passwordTextBox.Text,
-                    Role = selectedRole.Text
                 };
 
 
@@ -78,7 +66,7 @@ namespace HospitalClient.Forms
 
                 var httpClient = new HttpClient();
 
-                var response = await httpClient.PostAsync("http://localhost:5265/api/auth/register", content);
+                var response = await httpClient.PostAsync("http://localhost:5265/api/auth/register-provider", content);
 
                 if (!response.IsSuccessStatusCode)
                 {

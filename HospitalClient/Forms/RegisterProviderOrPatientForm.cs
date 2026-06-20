@@ -16,5 +16,19 @@ namespace HospitalClient.Forms
         {
             InitializeComponent();
         }
+
+        private void patientButton_Click(object sender, EventArgs e)
+        {
+            var registerPatientForm = new RegisterPatientForm();
+            registerPatientForm.Show();
+            this.Hide();
+        }
+
+        private void providerButton_Click(object sender, EventArgs e)
+        {
+            var registerProviderForm = new RegisterForm();
+            registerProviderForm.Show();
+            this.Hide();
+        }
     }
 }

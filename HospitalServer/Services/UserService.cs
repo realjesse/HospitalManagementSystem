@@ -39,7 +39,7 @@ namespace HospitalServer.Services
             {
                 Username = request.Username,
                 Password = request.Password,
-                Role = request.Role
+                Role = "Provider"
             };
 
             await _users.InsertOneAsync(user);
@@ -112,6 +112,8 @@ namespace HospitalServer.Services
                     _db.Patients.Remove(patient);
                     await _db.SaveChangesAsync();
                 }
+
+                throw;
             }
         }
 

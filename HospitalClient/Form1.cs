@@ -75,9 +75,9 @@ namespace HospitalClient
 
         private void goToRegisterButton_Click(object sender, EventArgs e)
         {
-            RegisterForm registerForm = new RegisterForm();
+            var registerProviderOrPatientForm = new RegisterProviderOrPatientForm();
 
-            registerForm.Show();
+            registerProviderOrPatientForm.Show();
 
             this.Hide();
         }
