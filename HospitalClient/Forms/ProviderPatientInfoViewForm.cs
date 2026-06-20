@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace HospitalClient.Forms
 {
     public partial class ProviderPatientInfoViewForm : Form
     {
+        private readonly string _baseUrl = "http://localhost:5265";
         public ProviderPatientInfoViewForm()
         {
             InitializeComponent();
@@ -40,7 +42,7 @@ namespace HospitalClient.Forms
             using (var httpClient = new HttpClient())
             {
                 var response = await httpClient.GetAsync(
-                    "http://localhost:5265/api/patients");
+                    _baseUrl + "/api/patients");
 
                 if (!response.IsSuccessStatusCode)
                 {
@@ -61,6 +63,65 @@ namespace HospitalClient.Forms
         {
             var providerRegisertingPatientForm = new ProviderRegisteringPatientForm();
             providerRegisertingPatientForm.Show();
+            this.Hide();
+        }
+
+        // Returns the selected patient from the data grid view
+        private PatientDto GetSelectedPatient()
+        {
+            if (patientDataGridView.CurrentRow == null)
+            {
+                return null;
+            }
+
+            return patientDataGridView.CurrentRow.DataBoundItem as PatientDto;
+        }
+
+        private async void deleteButton_Click(object sender, EventArgs e)
+        {
+            var selectedPatient = GetSelectedPatient();
+
+            if (selectedPatient == null)
+            {
+                MessageBox.Show("Please select a patient first.");
+                return;
+            }
+
+            var confirm = MessageBox.Show(
+                "Are you sure you want to delete " +
+                selectedPatient.FirstName + " " + selectedPatient.LastName + "?",
+                "Confirm Delete",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+                );
+
+            if (confirm != DialogResult.Yes)
+            {
+                return;
+            }
+
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.DeleteAsync(
+                    _baseUrl + "/api/patients/" + selectedPatient.PatientId
+                    );
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var body = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show("Could not delete patient.\n\n" + body);
+                    return;
+                }
+            }
+
+            MessageBox.Show("Patient deleted.");
+            await LoadPatientsAsync();
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            var patientEditForm = new PatientEditForm(GetSelectedPatient());
+            patientEditForm.Show();
             this.Hide();
         }
     }

@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Data that comes from databases.
+// Only patient data, no database data.
 namespace HospitalClient.Models
 {
-    public class PatientDto
+    public class PatientRequest
     {
-        public int PatientId { get; set; }
-        public string MongoUserId { get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }

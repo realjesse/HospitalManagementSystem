@@ -61,6 +61,12 @@
     <Compile Include="Forms\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PatientEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientEditForm.Designer.cs">
+      <DependentUpon>PatientEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PatientPatientInfoViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,7 @@
     <Compile Include="Models\AuthResponse.cs" />
     <Compile Include="Models\LoginRequest.cs" />
     <Compile Include="Models\PatientDto.cs" />
+    <Compile Include="Models\PatientRequest.cs" />
     <Compile Include="Models\RegisterPatientRequest.cs" />
     <Compile Include="Models\RegisterRequest.cs" />
     <Compile Include="Program.cs" />
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientEditForm.resx">
+      <DependentUpon>PatientEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientPatientInfoViewForm.resx">
       <DependentUpon>PatientPatientInfoViewForm.cs</DependentUpon>

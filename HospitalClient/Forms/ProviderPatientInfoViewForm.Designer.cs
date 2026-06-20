@@ -52,6 +52,7 @@
             this.patientDataGridView.AllowUserToDeleteRows = false;
             this.patientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.patientDataGridView.Location = new System.Drawing.Point(41, 50);
+            this.patientDataGridView.MultiSelect = false;
             this.patientDataGridView.Name = "patientDataGridView";
             this.patientDataGridView.ReadOnly = true;
             this.patientDataGridView.Size = new System.Drawing.Size(421, 174);
@@ -75,6 +76,7 @@
             this.editButton.TabIndex = 3;
             this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // deleteButton
             // 
@@ -84,6 +86,7 @@
             this.deleteButton.TabIndex = 4;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // ProviderPatientInfoViewForm
             // 
