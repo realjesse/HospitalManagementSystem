@@ -17,11 +17,27 @@ namespace HospitalServer.Controllers
             _userService = userService;
         }
 
-        // Controls when a user registers.
-        [HttpPost("register")]
-        public async Task<ActionResult<AuthResponse>> Register(RegisterRequest request)
+        // Register provider
+        [HttpPost("register-provider")]
+        public async Task<ActionResult<AuthResponse>> RegisterProvider(
+            RegisterProviderRequest request)
         {
-            var result = await _userService.RegisterAsync(request);
+            var result = await _userService.RegisterProviderAsync(request);
+
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
+        // Register patient
+        [HttpPost("register-patient")]
+        public async Task<ActionResult<AuthResponse>> RegisterPatient(
+            RegisterPatientRequest request)
+        {
+            var result = await _userService.RegisterPatientAsync(request);
 
             if (!result.Success)
             {

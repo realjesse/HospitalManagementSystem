@@ -82,10 +82,11 @@
             // 
             this.goToRegisterButton.Location = new System.Drawing.Point(33, 28);
             this.goToRegisterButton.Name = "goToRegisterButton";
-            this.goToRegisterButton.Size = new System.Drawing.Size(75, 23);
+            this.goToRegisterButton.Size = new System.Drawing.Size(85, 23);
             this.goToRegisterButton.TabIndex = 5;
-            this.goToRegisterButton.Text = "button2";
+            this.goToRegisterButton.Text = "Go to Register";
             this.goToRegisterButton.UseVisualStyleBackColor = true;
+            this.goToRegisterButton.Click += new System.EventHandler(this.goToRegisterButton_Click);
             // 
             // Form1
             // 

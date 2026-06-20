@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace HospitalClient.Forms
+{
+    public partial class PatientPatientInfoViewForm : Form
+    {
+        public PatientPatientInfoViewForm()
+        {
+            InitializeComponent();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            var menuForm = new MenuForm();
+            menuForm.Show();
+            this.Hide();
+        }
+    }
+}
