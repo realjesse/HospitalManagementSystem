@@ -59,6 +59,7 @@
             this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Username";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // usernameTextBox
             // 
@@ -66,6 +67,7 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(100, 20);
             this.usernameTextBox.TabIndex = 2;
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // passwordTextBox
             // 
@@ -73,6 +75,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 20);
             this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // label2
             // 
@@ -82,6 +85,7 @@
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // firstNameTextBox
             // 
@@ -89,6 +93,7 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.firstNameTextBox.TabIndex = 6;
+            this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
             // 
             // label3
             // 
@@ -98,6 +103,7 @@
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "First Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lastNameTextBox
             // 
@@ -105,6 +111,7 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.lastNameTextBox.TabIndex = 8;
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
             // 
             // label4
             // 
@@ -114,6 +121,7 @@
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Last Name";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dateOfBirthPicker
             // 
@@ -121,6 +129,7 @@
             this.dateOfBirthPicker.Name = "dateOfBirthPicker";
             this.dateOfBirthPicker.Size = new System.Drawing.Size(200, 20);
             this.dateOfBirthPicker.TabIndex = 9;
+            this.dateOfBirthPicker.ValueChanged += new System.EventHandler(this.dateOfBirthPicker_ValueChanged);
             // 
             // label5
             // 
@@ -130,6 +139,7 @@
             this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Date of Birth";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // RegisterPatientForm
             // 

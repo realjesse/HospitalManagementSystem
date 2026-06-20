@@ -73,6 +73,12 @@
     <Compile Include="Forms\ProviderPatientInfoViewForm.Designer.cs">
       <DependentUpon>ProviderPatientInfoViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProviderRegisteringPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProviderRegisteringPatientForm.Designer.cs">
+      <DependentUpon>ProviderRegisteringPatientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,7 @@
     </Compile>
     <Compile Include="Models\AuthResponse.cs" />
     <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\PatientDto.cs" />
     <Compile Include="Models\RegisterPatientRequest.cs" />
     <Compile Include="Models\RegisterRequest.cs" />
     <Compile Include="Program.cs" />
@@ -106,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientPatientInfoViewForm.resx">
       <DependentUpon>PatientPatientInfoViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProviderPatientInfoViewForm.resx">
+      <DependentUpon>ProviderPatientInfoViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProviderRegisteringPatientForm.resx">
+      <DependentUpon>ProviderRegisteringPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>

@@ -115,6 +115,7 @@ namespace HospitalServer.Services
             return new PatientResponse
             {
                 PatientId = patient.PatientId,
+                MongoUserId = patient.MongoUserId,
                 FirstName = patient.FirstName,
                 LastName = patient.LastName,
                 DateOfBirth = patient.DateOfBirth
