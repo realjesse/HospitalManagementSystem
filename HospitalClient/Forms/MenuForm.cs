@@ -43,5 +43,12 @@ namespace HospitalClient.Forms
             appointmentForm.Show();
             this.Hide();
         }
+
+        private void inventoryButton_Click(object sender, EventArgs e)
+        {
+            var inventoryForm = new InventoryForm();
+            inventoryForm.Show();
+            this.Hide();
+        }
     }
 }

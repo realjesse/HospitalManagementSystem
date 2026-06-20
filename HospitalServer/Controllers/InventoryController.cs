@@ -51,6 +51,13 @@ namespace HospitalServer.Controllers
                 "InventoryItemCreated",
                 item);
 
+            if (item.IsLowStock)
+            {
+                await _hubContext.Clients.All.SendAsync(
+                    "LowStockAlert",
+                    item);
+            }
+
             return CreatedAtAction(
                 nameof(GetById),
                 new { id = item.InventoryItemId },
@@ -72,6 +79,13 @@ namespace HospitalServer.Controllers
             await _hubContext.Clients.All.SendAsync(
                 "InventoryItemUpdated",
                 item);
+
+            if (item.IsLowStock)
+            {
+                await _hubContext.Clients.All.SendAsync(
+                    "LowStockAlert",
+                    item);
+            }
 
             return Ok(item);
         }

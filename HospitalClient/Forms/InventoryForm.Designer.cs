@@ -56,6 +56,7 @@
             this.inventoryGridView.Name = "inventoryGridView";
             this.inventoryGridView.Size = new System.Drawing.Size(365, 193);
             this.inventoryGridView.TabIndex = 0;
+            this.inventoryGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.inventoryGridView_CellClick);
             // 
             // itemNameTextBox
             // 
@@ -145,6 +146,7 @@
             this.addButton.TabIndex = 11;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -154,6 +156,7 @@
             this.deleteButton.TabIndex = 12;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // updateButton
             // 
@@ -163,6 +166,7 @@
             this.updateButton.TabIndex = 13;
             this.updateButton.Text = "Update";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // refreshButton
             // 
@@ -172,6 +176,7 @@
             this.refreshButton.TabIndex = 14;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = true;
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
             // backButton
             // 
@@ -181,6 +186,7 @@
             this.backButton.TabIndex = 15;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // InventoryForm
             // 
@@ -205,6 +211,7 @@
             this.Controls.Add(this.inventoryGridView);
             this.Name = "InventoryForm";
             this.Text = "InventoryForm";
+            this.Load += new System.EventHandler(this.InventoryForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inventoryGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimumStockNumericUpDown)).EndInit();
