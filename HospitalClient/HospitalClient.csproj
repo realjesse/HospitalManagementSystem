@@ -55,6 +55,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AppointmentForm.Designer.cs">
+      <DependentUpon>AppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,7 +115,11 @@
     <Compile Include="Forms\RegisterProviderOrPatientForm.Designer.cs">
       <DependentUpon>RegisterProviderOrPatientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AppointmentDto.cs" />
+    <Compile Include="Models\AppointmentRequest.cs" />
     <Compile Include="Models\AuthResponse.cs" />
+    <Compile Include="Models\InventoryItemDto.cs" />
+    <Compile Include="Models\InventoryItemRequest.cs" />
     <Compile Include="Models\LoginRequest.cs" />
     <Compile Include="Models\PatientDto.cs" />
     <Compile Include="Models\PatientRequest.cs" />
@@ -114,6 +130,12 @@
     <Compile Include="Session\CurrentUser.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AppointmentForm.resx">
+      <DependentUpon>AppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryForm.resx">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>

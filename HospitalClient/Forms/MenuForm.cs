@@ -36,5 +36,12 @@ namespace HospitalClient.Forms
                 this.Hide();
             }
         }
+
+        private void appointmentsButton_Click(object sender, EventArgs e)
+        {
+            var appointmentForm = new AppointmentForm();
+            appointmentForm.Show();
+            this.Hide();
+        }
     }
 }

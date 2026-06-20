@@ -17,6 +17,8 @@ builder.Services.AddDbContext<HospitalDbContext>(options =>
 
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<PatientService>();
+builder.Services.AddScoped<AppointmentService>();
+builder.Services.AddScoped<InventoryService>();
 
 var app = builder.Build();
 
