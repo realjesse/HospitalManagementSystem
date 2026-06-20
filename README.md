@@ -64,3 +64,16 @@ Current connection string:
 - This is where EFCore Migrations understand schema structure
 3. Using the NuGet Package Manager Console run `Add-Migration <DescriptiveName>`
 4. Using the NuGet Package Manager Console run `Update-Database`
+
+## Server Configuration
+### Local host server
+The project assumes your local http server is running on port 5265.
+Please check your server terminal to ensure it is running on `http://localhost:5265`
+
+### Starting the project
+To run both the server and client at the same time follow steps below.
+1. Right click on solution file.
+2. Click `Configure Startup Processes`
+3. Select `Multiple startup projects`
+4. Click `Start` for the Action for HospitalClient and HospitalServer.
+5. Click apply and save.
