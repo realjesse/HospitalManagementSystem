@@ -19,6 +19,8 @@ namespace HospitalServer.Data
             {
                 entity.HasKey(p => p.PatientId);
 
+                entity.HasIndex(p => p.MongoUserId);
+
                 entity.Property(p => p.FirstName)
                 .IsRequired();
 

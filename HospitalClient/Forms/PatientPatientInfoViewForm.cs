@@ -16,5 +16,12 @@ namespace HospitalClient.Forms
         {
             InitializeComponent();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            var menuForm = new MenuForm();
+            menuForm.Show();
+            this.Hide();
+        }
     }
 }
