@@ -11,11 +11,11 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSignalR();
-builder.Services.AddSingleton<UserService>();
 
 builder.Services.AddDbContext<HospitalDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 
+builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<PatientService>();
 
 var app = builder.Build();

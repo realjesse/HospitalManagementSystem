@@ -37,6 +37,19 @@ namespace HospitalServer.Services
             return ToResponse(patient);
         }
 
+        // Get by Mongoid
+        public async Task<PatientResponse?> GetByMongoUserIdAsync(string mongoUserId)
+        {
+            var patient = await _db.Patients.FirstOrDefaultAsync(p => p.MongoUserId == mongoUserId);
+
+            if (patient == null)
+            {
+                return null;
+            }
+
+            return ToResponse(patient);
+        }
+
         // Create a new patient
         public async Task<PatientResponse> CreateAsync(PatientRequest request)
         {

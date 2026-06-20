@@ -43,6 +43,18 @@ namespace HospitalServer.Controllers
             return Ok(patient);
         }
 
+        // Get a certain patient based on MongoDB user ID
+        [HttpGet("by-user/{mongoUserId}")]
+        public async Task<ActionResult<PatientResponse>> GetByMongoUserId(string mongoUserId)
+        {
+            var patient = await _patientService.GetByMongoUserIdAsync(mongoUserId);
+            if (patient == null)
+            {
+                return NotFound();
+            }
+            return Ok(patient);
+        }
+
         // Creat a patient
         [HttpPost]
         public async Task<ActionResult<PatientResponse>> Create(PatientRequest request)

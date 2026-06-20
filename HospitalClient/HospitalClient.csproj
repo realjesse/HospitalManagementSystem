@@ -61,6 +61,18 @@
     <Compile Include="Forms\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PatientPatientInfoViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientPatientInfoViewForm.Designer.cs">
+      <DependentUpon>PatientPatientInfoViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProviderPatientInfoViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProviderPatientInfoViewForm.Designer.cs">
+      <DependentUpon>ProviderPatientInfoViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +87,12 @@
     <Compile Include="Session\CurrentUser.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientPatientInfoViewForm.resx">
+      <DependentUpon>PatientPatientInfoViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
