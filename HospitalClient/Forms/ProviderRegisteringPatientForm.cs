@@ -11,14 +11,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// This form is used when a PATIENT is creating patient registration
+// This form shows when a PROVIDER is attempting to register a patient
 namespace HospitalClient.Forms
 {
-    public partial class RegisterPatientForm : Form
+    public partial class ProviderRegisteringPatientForm : Form
     {
-        public RegisterPatientForm()
+        public ProviderRegisteringPatientForm()
         {
             InitializeComponent();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            var providerPatientInfoViewForm = new ProviderPatientInfoViewForm();
+            providerPatientInfoViewForm.Show();
+            this.Hide();
         }
 
         private async void registerButton_Click(object sender, EventArgs e)
@@ -49,64 +56,11 @@ namespace HospitalClient.Forms
 
                 MessageBox.Show("Patient registered successfully!");
 
-                // Go to login form
-                var loginForm = new Form1();
-                loginForm.Show();
+                // Go back to patient view
+                var providerPatientInfoViewForm = new ProviderPatientInfoViewForm();
+                providerPatientInfoViewForm.Show();
                 this.Hide();
             }
-
-
-        }
-
-        // TODO REMOVE BELOW!
-        private void dateOfBirthPicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lastNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void firstNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

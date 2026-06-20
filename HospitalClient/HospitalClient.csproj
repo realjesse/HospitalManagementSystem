@@ -61,6 +61,12 @@
     <Compile Include="Forms\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PatientEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PatientEditForm.Designer.cs">
+      <DependentUpon>PatientEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PatientPatientInfoViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="Forms\ProviderPatientInfoViewForm.Designer.cs">
       <DependentUpon>ProviderPatientInfoViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProviderRegisteringPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProviderRegisteringPatientForm.Designer.cs">
+      <DependentUpon>ProviderRegisteringPatientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
@@ -93,6 +105,8 @@
     </Compile>
     <Compile Include="Models\AuthResponse.cs" />
     <Compile Include="Models\LoginRequest.cs" />
+    <Compile Include="Models\PatientDto.cs" />
+    <Compile Include="Models\PatientRequest.cs" />
     <Compile Include="Models\RegisterPatientRequest.cs" />
     <Compile Include="Models\RegisterRequest.cs" />
     <Compile Include="Program.cs" />
@@ -104,8 +118,17 @@
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PatientEditForm.resx">
+      <DependentUpon>PatientEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PatientPatientInfoViewForm.resx">
       <DependentUpon>PatientPatientInfoViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProviderPatientInfoViewForm.resx">
+      <DependentUpon>ProviderPatientInfoViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProviderRegisteringPatientForm.resx">
+      <DependentUpon>ProviderRegisteringPatientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>

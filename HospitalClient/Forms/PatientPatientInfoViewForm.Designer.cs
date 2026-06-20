@@ -82,6 +82,7 @@
             this.Controls.Add(this.backButton);
             this.Name = "PatientPatientInfoViewForm";
             this.Text = "PatientPatientInfoViewForm";
+            this.Load += new System.EventHandler(this.PatientPatientInfoViewForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
