@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.appointmentsButton = new System.Windows.Forms.Button();
             this.inventoryButton = new System.Windows.Forms.Button();
+            this.button_reportsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // viewPatientInfoButton
@@ -73,11 +74,22 @@
             this.inventoryButton.UseVisualStyleBackColor = true;
             this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
             // 
+            // button_reportsButton
+            // 
+            this.button_reportsButton.Location = new System.Drawing.Point(121, 214);
+            this.button_reportsButton.Name = "button_reportsButton";
+            this.button_reportsButton.Size = new System.Drawing.Size(110, 23);
+            this.button_reportsButton.TabIndex = 4;
+            this.button_reportsButton.Text = "Reporting";
+            this.button_reportsButton.UseVisualStyleBackColor = true;
+            this.button_reportsButton.Click += new System.EventHandler(this.button_reportsButton_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(610, 293);
+            this.Controls.Add(this.button_reportsButton);
             this.Controls.Add(this.inventoryButton);
             this.Controls.Add(this.appointmentsButton);
             this.Controls.Add(this.label1);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button appointmentsButton;
         private System.Windows.Forms.Button inventoryButton;
+        private System.Windows.Forms.Button button_reportsButton;
     }
 }
