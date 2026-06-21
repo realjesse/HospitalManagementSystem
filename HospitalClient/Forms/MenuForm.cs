@@ -16,6 +16,11 @@ namespace HospitalClient.Forms
         public MenuForm()
         {
             InitializeComponent();
+
+            if (!CurrentUser.IsProvider)
+            {
+                button_reportsButton.Enabled = false;
+            }
         }
 
         private void viewPatientInfoButton_Click(object sender, EventArgs e)
@@ -48,6 +53,20 @@ namespace HospitalClient.Forms
         {
             var inventoryForm = new InventoryForm();
             inventoryForm.Show();
+            this.Hide();
+        }
+
+        private void button_reportsButton_Click(object sender, EventArgs e)
+        {
+            //in case users still try the button when not logged in as provider
+            if (!CurrentUser.IsProvider)
+            {
+                MessageBox.Show("Reports are only available to providers.");
+                return;
+            }
+
+            var reportsForm = new ReportsForm();
+            reportsForm.Show();
             this.Hide();
         }
     }
